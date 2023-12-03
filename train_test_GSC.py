@@ -16,7 +16,7 @@ import scipy
 
 # Base Configuration Class
 class Config(object):
-	GPU_INDEX = 7
+	GPU_INDEX = 0
 	DATA_DIR = ['/research/cvlshare/cvl-liuyaoj1/Data/Helen/bin/*',
 				'/research/cvlshare/cvl-liuyaoj1/Data/FFHQ/*',]  
 	#DATA_DIR_VAL = ['/research/cvl-liuyaoj1/Data/UCB/train/input/*',
