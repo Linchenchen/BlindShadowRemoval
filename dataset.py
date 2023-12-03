@@ -67,8 +67,8 @@ class Dataset():
                 dataset = dataset.map(map_func=self.parse_fn_test_sfw_video, num_parallel_calls=autotune)
                 dataset = dataset.batch(batch_size=self.config.BATCH_SIZE).prefetch(buffer_size=autotune)
             else:
-                #dataset = dataset.map(map_func=self.parse_fn_test, num_parallel_calls=autotune)
-                dataset = dataset.map(map_func=self.parse_fn_test_FFHQ, num_parallel_calls=autotune)
+                dataset = dataset.map(map_func=self.parse_fn_test, num_parallel_calls=autotune)
+                #dataset = dataset.map(map_func=self.parse_fn_test_FFHQ, num_parallel_calls=autotune)
                 dataset = dataset.batch(batch_size=1).prefetch(buffer_size=autotune)
         return dataset, data_samples
 
