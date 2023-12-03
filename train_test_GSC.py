@@ -24,8 +24,8 @@ class Config(object):
 	DATA_DIR_VAL = ['/research/cvlshare/cvl-liuyaoj1/Data/UCB/train/input/*']
 	#DATA_DIR_TEST = ['/research/cvlshare/cvl-liuyaoj1/Data/SFW/*']
 	#DATA_DIR_TEST = ['/research/cvlshare/cvl-andrew/Data/FFHQ_CVPR2022_part2_cropped/*']
-	DATA_DIR_TEST = ['sample_imgs/*']
-	#DATA_DIR_TEST = ['UCB/train/input/*']
+	#DATA_DIR_TEST = ['sample_imgs/*']
+	DATA_DIR_TEST = ['UCB/train/input/*']
 	#DATA_DIR_TEST = ['/research/cvlshare/cvl-liuyaoj1/Data/UCB/train/input/*']
 	LOG_DEVICE_PLACEMENT = False
 	IMG_SIZE = 256
@@ -945,10 +945,10 @@ def main():
 	# model define
 	fsr = FSRNet(config)
 	#fsr.train(dataset_train, dataset_val)
-	fsr.testFFHQ(dataset_test)
+	#fsr.testFFHQ(dataset_test)
 	#fsr.testsfw_video(dataset_test)
 	#fsr.testsfw(dataset_test)
-	#fsr.test(dataset_test)
+	fsr.test(dataset_test)
 
 
 if __name__ == "__main__":
