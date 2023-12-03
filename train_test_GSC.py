@@ -55,7 +55,7 @@ class Config(object):
 	def __init__(self, gpu_idx=None):
 		# if gpu_idx is None:
 		# 	gpu_idx = self.GPU_INDEX
-		gpu_idx b= 0
+		gpu_idx = 0
 		gpus = tf.config.experimental.list_physical_devices('GPU')
 		print(gpus)
 		print(gpu_idx)
