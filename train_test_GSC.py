@@ -56,6 +56,8 @@ class Config(object):
 		if gpu_idx is None:
 			gpu_idx = self.GPU_INDEX
 		gpus = tf.config.experimental.list_physical_devices('GPU')
+		print(gpus)
+		print(gpu_idx)
 		if gpus:
 			try:
 				tf.config.experimental.set_memory_growth(gpus[gpu_idx], True)
