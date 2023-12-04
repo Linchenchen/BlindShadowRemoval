@@ -178,7 +178,7 @@ class ConvT(layers.Layer):
 
 class ShareLayer(layers.Layer):
     def __init__(self):
-        super(ShareLayer, self).__init__(self)
+        super(ShareLayer, self).__init__()
         self.imsize = 256
 
     def call(self, x, reg, chuck):
