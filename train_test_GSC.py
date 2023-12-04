@@ -124,8 +124,8 @@ class FSRNet(object):
 		self.disc1 = Discriminator(1,config.n_layer_D)
 		self.disc2 = Discriminator(2,config.n_layer_D)
 		self.disc3 = Discriminator(4,config.n_layer_D) 
-		self.gen_opt = tf.keras.optimizers.Adam(config.LEARNING_RATE)
-		self.disc_opt = tf.keras.optimizers.Adam(config.LEARNING_RATE)
+		self.gen_opt = tf.keras.optimizers.legacy.Adam(config.LEARNING_RATE)
+		self.disc_opt = tf.keras.optimizers.legacy.Adam(config.LEARNING_RATE)
 
 		# perceptual loss
 		self.vgg = tf.keras.applications.VGG19(include_top=False, weights='imagenet')
